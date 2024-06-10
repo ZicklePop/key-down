@@ -25,7 +25,7 @@ npm install --save @zicklepop/key-down
 
 ## Basic Usage
 
-Just requires a button inside the component.
+Just requires a child element
 
 ```html
 <key-down data-key="a">
