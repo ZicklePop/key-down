@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>key-down demo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <meta name="description" content="A web component for quick key commands" />
+    <script type="module" src="key-down.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        max-width: 40em;
+        margin-inline: auto;
+        padding-inline: 1rem;
+      }
+      section {
+        margin: 3rem 0;
+      }
+      code {
+        font-family: monospace;
+      }
+      pre {
+        border: 1px solid gray;
+        border-radius: 0.5rem;
+        margin: 1rem 0;
+        padding: 1rem;
+      }
+      dt {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>&lt;key-down&gt;</h1>
+      <p>A web component for quick key commands</p>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <key-down data-key="g">
+            <a href="https://github.com/ZicklePop/key-down">GitHub</a>
+          </key-down>
+        </li>
+        <li>
+          <key-down data-key="n">
+            <a href="https://www.npmjs.com/package/@zicklepop/key-down">NPM</a>
+          </key-down>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <h2>Install</h2>
+        <p>
+          <code>npm install --save @zicklepop/key-down</code>
+        </p>
+      </section>
+      <section>
+        <h2>Properties</h2>
+        <dl>
+          <dt>data-key</dt>
+          <dd>string, required: The key we are watching to be pressed</dd>
+          <dt>data-scroll</dt>
+          <dd>
+            boolean, optional: If true, the page will scroll the wrapped element
+            in to view
+          </dd>
+          <dt>data-altKey</dt>
+          <dd>
+            boolean, optional: Setting this as true or false will require the
+            alt/option key to be pressed or not, otherwise it will not matter.
+          </dd>
+          <dt>data-ctrlKey</dt>
+          <dd>
+            boolean, optional: Setting this as true or false will require the
+            control key to be pressed or not, otherwise it will not matter.
+          </dd>
+          <dt>data-metaKey</dt>
+          <dd>
+            boolean, optional: Setting this as true or false will require the
+            meta/Windows/command key to be pressed or not, otherwise it will not
+            matter.
+          </dd>
+          <dt>data-shiftKey</dt>
+          <dd>
+            boolean, optional: Setting this as true or false will require the
+            shift key to be pressed or not, otherwise it will not matter. If you
+            just want to monitor for a capital letter or symbol, it is
+            recommended to set the `data-key` value to it (ie `A` or `!`)
+          </dd>
+        </dl>
+      </section>
+      <section>
+        <h2>Basic Usage</h2>
+        <p>Just requires a button inside the component</p>
+        <key-down data-key="a">
+          <button onclick="window.alert(`The press 'a' button was pressed`)">
+            Press 'a' key
+          </button>
+        </key-down>
+        <pre><code>&lt;key-down data-key="a"&gt;
+  &lt;button&gt;
+    Press 'a' key
+  &lt;/button&gt;
+&lt;/key-down&gt;</code></pre>
+      </section>
+      <section>
+        <h2>With Everything</h2>
+        <p>
+          Using every manual property. While I included the class to show the
+          count, it should not show anything
+        </p>
+        <key-down
+          data-key="b"
+          data-scroll="true"
+          data-altKey="false"
+          data-ctrlKey="true"
+          data-metaKey="false"
+          data-shiftKey="false"
+        >
+          <input type="text" placeholder="Press 'ctrl+b' key"></input>
+        </key-down>
+        <pre><code>&lt;key-down
+  data-key="b"
+  data-scroll="true"
+  data-altKey="false"
+  data-ctrlKey="true"
+  data-metaKey="false"
+  data-shiftKey="false"
+&gt;
+  &lt;input type="text" placeholder="Press 'ctrl+b' key"&gt;&lt;/input&gt;
+&lt;/key-down&gt;</code></pre>
+      </section>
+    </main>
+    <footer>
+      <p>
+        made with love by
+        <a href="https://melaniekat.com" rel="me">melanie kat</a>
+      </p>
+    </footer>
+  </body>
+</html>

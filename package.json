@@ -1,0 +1,27 @@
+{
+  "name": "@zicklepop/key-down",
+  "version": "1.0.0",
+  "description": "A web component for quick key commands",
+  "type": "module",
+  "main": "key-down.js",
+  "types": "key-down.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zicklepop/key-down.git"
+  },
+  "author": {
+    "name": "Melanie Kat",
+    "url": "https://melaniekat.com/"
+  },
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/zicklepop/key-down/issues"
+  },
+  "homepage": "https://github.com/zicklepop/key-down#readme"
+}
