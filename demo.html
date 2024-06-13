@@ -61,6 +61,10 @@
         <dl>
           <dt>data-key</dt>
           <dd>string, required: The key we are watching to be pressed</dd>
+          <dt>data-action</dt>
+          <dd>
+            enum, optional: Defaults to 'click', but can be set to be 'focus'
+          </dd>
           <dt>data-scroll</dt>
           <dd>
             boolean, optional: If true, the page will scroll the wrapped element
@@ -93,9 +97,9 @@
       </section>
       <section>
         <h2>Basic Usage</h2>
-        <p>Just requires a child element</p>
+        <p>Just requires a clickable child element</p>
         <key-down data-key="a">
-          <button onclick="window.alert(`The press 'a' button was pressed`)">
+          <button onclick="window.alert(`The button was pressed`)">
             Press 'a' key
           </button>
         </key-down>
@@ -106,6 +110,24 @@
 &lt;/key-down&gt;</code></pre>
       </section>
       <section>
+        <h2>With Defined Action</h2>
+        <p>
+          By default, the web component will click the child when the key is pressed, but you can pass in an action like 'focus' for input boxes.
+        </p>
+        <key-down data-key="b" data-action="focus">
+          <input type="text" placeholder="Press 'b' key"></input>
+        </key-down>
+        <pre><code>&lt;key-down
+  data-key="b"
+  data-action="focus"
+&gt;
+  &lt;input
+    type="text"
+    placeholder="Press 'b' key"
+  /&gt;
+&lt;/key-down&gt;</code></pre>
+      </section>
+      <section>
         <h2>With Everything</h2>
         <p>
           Using every manual property. While I included the class to show the
@@ -113,23 +135,28 @@
         </p>
         <key-down
           data-key="b"
+          data-action="focus"
           data-scroll="true"
           data-altKey="false"
           data-ctrlKey="true"
           data-metaKey="false"
           data-shiftKey="false"
         >
-          <input type="text" placeholder="Press 'ctrl+b' key"></input>
+          <input type="text" placeholder="Press 'ctrl+b' key"/>
         </key-down>
         <pre><code>&lt;key-down
   data-key="b"
+  data-action="focus"
   data-scroll="true"
   data-altKey="false"
   data-ctrlKey="true"
   data-metaKey="false"
   data-shiftKey="false"
 &gt;
-  &lt;input type="text" placeholder="Press 'ctrl+b' key"&gt;&lt;/input&gt;
+  &lt;input
+    type="text"
+    placeholder="Press 'ctrl+b' key"
+  /&gt;
 &lt;/key-down&gt;</code></pre>
       </section>
     </main>

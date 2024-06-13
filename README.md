@@ -17,6 +17,7 @@ npm install --save @zicklepop/key-down
 ## Properties
 
 - **data-key** _string, required_: The key we are watching to be pressed
+- **data-action** _enum, optional_: Defaults to 'click', but can be set to be 'focus'
 - **data-scroll** _boolean, optional_: If true, the page will scroll the wrapped element in to view
 - **data-altKey** _boolean, optional_: Setting this as true or false will require the alt/option key to be pressed or not, otherwise it will not matter.
 - **data-ctrlKey** _boolean, optional_: Setting this as true or false will require the control key to be pressed or not, otherwise it will not matter.
@@ -25,11 +26,21 @@ npm install --save @zicklepop/key-down
 
 ## Basic Usage
 
-Just requires a child element
+Just requires a clickable child element
 
 ```html
 <key-down data-key="a">
   <button></button>
+</key-down>
+```
+
+## With Defined Action
+
+By default, the web component will click the child when the key is pressed, but you can pass in an action like 'focus' for input boxes.
+
+```html
+<key-down data-key="b" data-action="focus">
+  <input type="text" placeholder="Press 'b' key" />
 </key-down>
 ```
 
@@ -46,9 +57,6 @@ Using every manual property.
   data-metaKey="false"
   data-shiftKey="false"
 >
-  <input
-    type="text"
-    placeholder="Press 'ctrl+b' key"
-  ></input>
+  <input type="text" placeholder="Press 'ctrl+b' key" />
 </key-down>
 ```

@@ -1,5 +1,9 @@
 class KeyDown extends HTMLElement {
   static tagName = "key-down";
+  static actions = {
+    click: "click",
+    focus: "focus",
+  };
 
   static register(
     tagName = this.tagName,
@@ -10,6 +14,7 @@ class KeyDown extends HTMLElement {
 
   connectedCallback() {
     const key = this.getAttribute("data-key");
+    const action = this.getAttribute("data-action");
     const scroll = this.getAttrBool("data-scroll");
     const rules = {
       altKey: this.getAttrBool("data-altKey"),
@@ -40,8 +45,14 @@ class KeyDown extends HTMLElement {
               block: "center",
             });
           }
-          child?.focus();
-          child?.click();
+          switch (action) {
+            case KeyDown.actions.focus:
+              child?.focus();
+              break;
+            case KeyDown.actions.click:
+            default:
+              child?.click();
+          }
         }
       }
     };
