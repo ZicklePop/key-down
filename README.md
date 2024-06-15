@@ -13,6 +13,7 @@ npm install --save @zicklepop/key-down
 - [Demo](http://zicklepop.github.io/key-down/demo.html)
 - [GitHub](https://github.com/zicklepop/key-down)
 - [NPM](https://www.npmjs.com/package/@zicklepop/key-down)
+- [JSR](https://jsr.io/@zicklepop/key-down)
 
 ## Properties
 

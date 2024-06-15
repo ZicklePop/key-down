@@ -1,29 +1,30 @@
 {
-	"name": "@zicklepop/key-down",
-	"version": "1.0.1",
-	"description": "A web component for quick key commands",
-	"type": "module",
-	"main": "key-down.js",
-	"types": "key-down.d.ts",
-	"publishConfig": {
-		"access": "public"
-	},
-	"scripts": {
-		"start": "npx serve .",
-		"test": "npx @biomejs/biome check .",
-		"format": "npx @biomejs/biome check . --fix"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/zicklepop/key-down.git"
-	},
-	"author": {
-		"name": "Melanie Kat",
-		"url": "https://melaniekat.com/"
-	},
-	"license": "Unlicense",
-	"bugs": {
-		"url": "https://github.com/zicklepop/key-down/issues"
-	},
-	"homepage": "https://github.com/zicklepop/key-down#readme"
+  "name": "@zicklepop/key-down",
+  "version": "1.0.1",
+  "description": "A web component for quick key commands",
+  "type": "module",
+  "main": "key-down.js",
+  "types": "key-down.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "start": "npx serve .",
+    "test": "npx @biomejs/biome check .",
+    "format": "npx @biomejs/biome check . --fix",
+    "jsr": "npx jsr publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zicklepop/key-down.git"
+  },
+  "author": {
+    "name": "Melanie Kat",
+    "url": "https://melaniekat.com/"
+  },
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/zicklepop/key-down/issues"
+  },
+  "homepage": "https://github.com/zicklepop/key-down#readme"
 }
