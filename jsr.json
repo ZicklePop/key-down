@@ -1,0 +1,6 @@
+{
+	"name": "@zicklepop/key-down",
+	"version": "1.0.1",
+	"exports": "./key-down.js",
+	"publish": { "include": ["key-down.js", "key-down.d.ts"] }
+}

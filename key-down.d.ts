@@ -5,17 +5,16 @@ type JSXBase = JSX.IntrinsicElements extends {
 }
 	? JSX.IntrinsicElements
 	: Record<string, Record<string, unknown>>;
-declare global {
-	interface Window {
-		KeyDown: typeof KeyDown;
-	}
-	interface HTMLElementTagNameMap {
-		"key-down": KeyDown;
-	}
-	namespace JSX {
-		interface IntrinsicElements {
-			"key-down": JSXBase["span"] & Partial<Omit<KeyDown, keyof HTMLElement>>;
-		}
+
+interface Window {
+	KeyDown: typeof KeyDown;
+}
+interface HTMLElementTagNameMap {
+	"key-down": KeyDown;
+}
+namespace JSX {
+	interface IntrinsicElements {
+		"key-down": JSXBase["span"] & Partial<Omit<KeyDown, keyof HTMLElement>>;
 	}
 }
 

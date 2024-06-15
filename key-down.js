@@ -1,3 +1,4 @@
+// @ts-self-types="./key-down.d.ts"
 class KeyDown extends HTMLElement {
 	static tagName = "key-down";
 	static actions = {
