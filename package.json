@@ -9,7 +9,8 @@
     "access": "public"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx @biomejs/biome check .",
+    "format": "npx @biomejs/biome check . --fix"
   },
   "repository": {
     "type": "git",
