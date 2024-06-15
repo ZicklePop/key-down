@@ -9,6 +9,7 @@
     "access": "public"
   },
   "scripts": {
+    "start": "npx serve .",
     "test": "npx @biomejs/biome check .",
     "format": "npx @biomejs/biome check . --fix"
   },
