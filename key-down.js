@@ -6,10 +6,10 @@ class KeyDown extends HTMLElement {
   };
 
   static register(
-    tagName = this.tagName,
+    tagName = KeyDown.tagName,
     registry = globalThis.customElements
   ) {
-    registry?.define(tagName, this);
+    registry?.define(tagName, KeyDown);
   }
 
   connectedCallback() {
@@ -49,7 +49,6 @@ class KeyDown extends HTMLElement {
             case KeyDown.actions.focus:
               child?.focus();
               break;
-            case KeyDown.actions.click:
             default:
               child?.click();
           }

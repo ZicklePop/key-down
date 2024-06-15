@@ -14,7 +14,7 @@ declare global {
   }
   namespace JSX {
     interface IntrinsicElements {
-      ["key-down"]: JSXBase["span"] & Partial<Omit<KeyDown, keyof HTMLElement>>;
+      "key-down": JSXBase["span"] & Partial<Omit<KeyDown, keyof HTMLElement>>;
     }
   }
 }
