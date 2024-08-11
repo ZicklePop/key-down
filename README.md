@@ -52,6 +52,7 @@ Using every manual property.
 ```html
 <key-down
   data-key="b"
+  data-action="focus"
   data-scroll="true"
   data-altKey="false"
   data-ctrlKey="true"
