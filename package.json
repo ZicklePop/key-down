@@ -2,6 +2,11 @@
   "name": "@zicklepop/key-down",
   "version": "1.0.1",
   "description": "A web component for quick key commands",
+  "keywords": [
+    "web component",
+    "keydown",
+    "hotkey"
+  ],
   "type": "module",
   "main": "key-down.js",
   "types": "key-down.d.ts",
